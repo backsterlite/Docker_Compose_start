@@ -1,0 +1,10 @@
+version "3.17"
+services:
+  python-app:
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/my-app
+    environment:
+      PYTHON_VERSION: "3.8"
+    command: "python ./main.py"
